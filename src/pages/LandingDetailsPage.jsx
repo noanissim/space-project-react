@@ -24,7 +24,6 @@ export class LandingDetailsPage extends Component {
    }
 
    async loadLanding() {
-      console.log('this.props.match :>>', this.props.match)
       const landing = await landingService.getLandingById(this.props.match.params.id)
       this.setState({ landing })
       this.setVideoUrl()

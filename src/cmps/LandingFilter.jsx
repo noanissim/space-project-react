@@ -1,4 +1,4 @@
-import { FormControl, InputLabel, MenuItem, Select, TextField } from '@mui/material'
+import { Button, FormControl, InputLabel, MenuItem, Select, TextField } from '@mui/material'
 import React, { Component } from 'react'
 
 export class LandingFilter extends Component {
@@ -6,7 +6,8 @@ export class LandingFilter extends Component {
       // name: '',
       // phone: '',
       // email: '',
-      term: ''
+      term: '',
+      sort: ''
    }
 
    handleChange = ({ target }) => {
@@ -17,26 +18,43 @@ export class LandingFilter extends Component {
       })
    }
 
-   render() {
-      // const { name, phone, email, term } = this.state
-      const { term } = this.state
-      return (
-         <form className="landing-filter">
-            <section className="input-container">
-               <label htmlFor="term">Filter by name / details:</label>
-               <TextField id="outlined-name" label="Name" value={term} onChange={this.handleChange} type="text" name="term" id="term" />
-               {/* <input onChange={this.handleChange} value={term} type="text" name="term" id="term" /> */}
-            </section>
+   handleChange2 = ev => {
+      console.log('ev', ev.target.value)
+      this.setState({ term: ev.target.value }, () => {
+         this.props.changeFilter(this.state)
+      })
+   }
 
-            {/* <FormControl variant="standard" sx={{ m: 1, minWidth: 120 }}>
-               <InputLabel id="demo-simple-select-label">All</InputLabel>
-               <Select labelId="demo-simple-select-label" id="demo-simple-select" value={term} label="All" onChange={this.handleChange}>
-                  <MenuItem value={'all'}>All</MenuItem>
+   onClear = () => {
+      this.setState({ term: '' }, () => {
+         this.props.changeFilter(this.state)
+      })
+   }
+
+   render() {
+      const { term, sort } = this.state
+      return (
+         <div className="landing-filter">
+            <form>
+               <section className="input-container">
+                  {/* <label htmlFor="term">Filter by name / details:</label> */}
+                  <TextField id="outlined-name" label="Filter by name / details" value={term} onChange={this.handleChange} type="text" name="term" id="term" />
+                  {/* <input onChange={this.handleChange} value={term} type="text" name="term" id="term" /> */}
+               </section>
+            </form>
+            <FormControl variant="filled" sx={{ m: 1, minWidth: 160 }}>
+               <InputLabel id="demo-simple-select-label">Sort by success</InputLabel>
+               <Select labelId="demo-simple-select-label" id="demo-simple-select" value={sort} label="sort" onChange={this.handleChange2}>
+                  {/* <MenuItem value={''}></MenuItem>
+                  <MenuItem value={''}>All</MenuItem> */}
                   <MenuItem value={'success'}>Success</MenuItem>
-                  <MenuItem value={'fail'}>Failure</MenuItem>
+                  <MenuItem value={'failure'}>Fail</MenuItem>
                </Select>
-            </FormControl> */}
-         </form>
+            </FormControl>
+            <Button onClick={this.onClear} variant="contained">
+               Clear filter
+            </Button>
+         </div>
       )
    }
 }

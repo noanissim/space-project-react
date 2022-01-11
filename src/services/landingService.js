@@ -13,18 +13,14 @@ const STORAGE_KEY = 'landings'
 
 async function getLandingsAsync(filterBy = null) {
    const ans = storageService.load(STORAGE_KEY)
-   console.log('ans :>>', ans)
-   // if (ans) return Promise.resolve(ans)
    if (ans) {
       if (filterBy && filterBy.term) {
-         console.log('filterBy :>>', filterBy)
          let landingsToReturn = filter(filterBy.term)
          return Promise.resolve(landingsToReturn)
       }
    }
    try {
       const res = await axios.get(`https://api.spacexdata.com/v3/launches`, { params: { limit: 20, offset: 0 } })
-      console.log('res.data', res.data)
       res.data.forEach(landing => (landing._id = _makeId()))
       storageService.store(STORAGE_KEY, res.data)
       // return res.data
@@ -132,11 +128,12 @@ function getEmptyLanding() {
 //    })
 // }
 function filter(term) {
-   console.log('term', term)
    let gLandings = storageService.load(STORAGE_KEY)
    term = term.toLocaleLowerCase()
    return gLandings.filter(landing => {
-      return landing['mission_name'].toLowerCase().includes(term) || landing?.details?.toLowerCase().includes(term)
+      if (term === 'success') return landing.launch_success === true
+      else if (term === 'fail') return landing.launch_success === false
+      else return landing.mission_name.toLowerCase().includes(term) || landing?.details?.toLowerCase().includes(term)
    })
 }
 
