@@ -1,0 +1,14 @@
+.landing-filter {
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   flex-wrap: wrap;
+   justify-content: space-between;
+
+   .input-container {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 10px;
+   }
+}

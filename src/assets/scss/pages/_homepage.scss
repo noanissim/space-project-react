@@ -1,0 +1,37 @@
+.homepage-app {
+   background-color: white;
+   background: #ffffff;
+   background-image: url('https://www.nasa.gov/sites/default/files/styles/full_width_feature/public/thumbnails/image/hubble_ngc105_potw2201a_0.jpg');
+   background-image: url('https://www.nasa.gov/sites/default/files/styles/full_width_feature/public/thumbnails/image/hubble_ngc105_potw2201a_0.jpg'), linear-gradient(#ffffff93, #b9b9b9);
+
+   background-image: linear-gradient(45deg, rgba(124, 124, 124, 0.62), rgba(23, 98, 196, 0.58)),
+      url('https://www.nasa.gov/sites/default/files/styles/full_width_feature/public/thumbnails/image/hubble_ngc105_potw2201a_0.jpg');
+
+   background-size: cover;
+   min-height: 90vh;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   // justify-content: center;
+
+   // width: 100%;
+   // min-height: 90vh;
+
+   h1,
+   h2 {
+      margin: auto;
+      font-weight: 500;
+      font-size: 3.5em;
+      text-align: center;
+
+      // text-shadow: 0px 1px 15px 5px rgba(59, 26, 26, 0.8);
+      text-shadow: 5px 5px rgba(0, 0, 0, 0.589);
+      color: #fff;
+   }
+   img {
+      margin: 10px;
+
+      width: 300px;
+      height: 300px;
+   }
+}
