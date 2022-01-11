@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/space-project-react/static/css/main.813d563d.css",
+    "main.js": "/space-project-react/static/js/main.651fdba0.js",
+    "static/js/787.fb61bd2e.chunk.js": "/space-project-react/static/js/787.fb61bd2e.chunk.js",
+    "static/media/space.gif": "/space-project-react/static/media/space.d37caeb3dfe71040ed18.gif",
+    "static/media/bitcoin.png": "/space-project-react/static/media/bitcoin.aa70a1a5a91544458d1b.png",
+    "index.html": "/space-project-react/index.html",
+    "main.813d563d.css.map": "/space-project-react/static/css/main.813d563d.css.map",
+    "main.651fdba0.js.map": "/space-project-react/static/js/main.651fdba0.js.map",
+    "787.fb61bd2e.chunk.js.map": "/space-project-react/static/js/787.fb61bd2e.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.813d563d.css",
+    "static/js/main.651fdba0.js"
+  ]
+}
