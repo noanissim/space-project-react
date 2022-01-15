@@ -1,17 +1,19 @@
 {
   "files": {
-    "main.css": "/space-project-react/static/css/main.96f0a740.css",
-    "main.js": "/space-project-react/static/js/main.1ac05f8f.js",
+    "main.css": "/space-project-react/static/css/main.cb6dc8a1.css",
+    "main.js": "/space-project-react/static/js/main.b10b19ea.js",
     "static/js/787.fb61bd2e.chunk.js": "/space-project-react/static/js/787.fb61bd2e.chunk.js",
     "static/media/space.gif": "/space-project-react/static/media/space.d37caeb3dfe71040ed18.gif",
+    "static/media/space1.png": "/space-project-react/static/media/space1.1a15460d5364f2aaba87.png",
+    "static/media/space2.jpg": "/space-project-react/static/media/space2.3584ba954178468b6ce3.jpg",
     "static/media/bitcoin.png": "/space-project-react/static/media/bitcoin.aa70a1a5a91544458d1b.png",
     "index.html": "/space-project-react/index.html",
-    "main.96f0a740.css.map": "/space-project-react/static/css/main.96f0a740.css.map",
-    "main.1ac05f8f.js.map": "/space-project-react/static/js/main.1ac05f8f.js.map",
+    "main.cb6dc8a1.css.map": "/space-project-react/static/css/main.cb6dc8a1.css.map",
+    "main.b10b19ea.js.map": "/space-project-react/static/js/main.b10b19ea.js.map",
     "787.fb61bd2e.chunk.js.map": "/space-project-react/static/js/787.fb61bd2e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.96f0a740.css",
-    "static/js/main.1ac05f8f.js"
+    "static/css/main.cb6dc8a1.css",
+    "static/js/main.b10b19ea.js"
   ]
 }
